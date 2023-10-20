@@ -38,14 +38,21 @@ return {
   { "jghauser/follow-md-links.nvim", ft = "md" },
   -- Java
   { "mfussenegger/nvim-jdtls", ft = "java" },
-  -- Julia
   -- Lean
-  "nvim-treesitter/nvim-treesitter-textobjects",
-  "andrewradev/switch.vim",
+  { "nvim-treesitter/nvim-treesitter-textobjects", ft = "lean" },
+  { "andrewradev/switch.vim", ft = "lean" },
   {
     "Julian/lean.nvim",
+    event = { "BufReadPre *.lean", "BufNewFile *.lean" },
     dependencies = {
+      "neovim/nvim-lspconfig",
       "nvim-lua/plenary.nvim",
+    },
+    opts = {
+      lsp = {
+        on_attach = astronvim.lsp.on_attach,
+      },
+      mappings = true,
     },
     config = function()
       require("lean").setup {
@@ -54,8 +61,10 @@ return {
         lsp3 = { on_attach = astronvim.lsp.on_attach },
         mappings = true,
       }
-    end
+    end,
+    ft = "lean"
   },
+  -- Julia
   { "jpalardy/vim-slime", ft = "julia" },
   -- Rust
   "simrat39/rust-tools.nvim",
