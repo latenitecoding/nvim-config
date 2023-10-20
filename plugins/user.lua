@@ -31,18 +31,14 @@ return {
     end,
   },
   -- Harpoon
-  "ThePrimeagen/harpoon",
-  "machakann/vim-sandwich",
+  { "ThePrimeagen/harpoon", lazy = false },
+  { "machakann/vim-sandwich", lazy = false },
   -- Markdown
-  "ellisonleao/glow.nvim",
-  "jghauser/follow-md-links.nvim",
+  { "ellisonleao/glow.nvim", ft = "md" },
+  { "jghauser/follow-md-links.nvim", ft = "md" },
   -- Java
-  "mfussenegger/nvim-jdtls",
+  { "mfussenegger/nvim-jdtls", ft = "java" },
   -- Julia
-  {
-    "jpalardy/vim-slime",
-    ft = "julia",
-  },
   -- Lean
   "nvim-treesitter/nvim-treesitter-textobjects",
   "andrewradev/switch.vim",
@@ -60,6 +56,7 @@ return {
       }
     end
   },
+  { "jpalardy/vim-slime", ft = "julia" },
   -- Rust
   "simrat39/rust-tools.nvim",
   -- Copilot
