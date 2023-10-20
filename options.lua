@@ -9,7 +9,6 @@ return {
     colorcolumn = "80,100,120",
     scrolloff = 8,
     wrap = true, -- sets vim.opt.wrap
-    textwidth = 80,
     guicursor = "",
     tabstop = 4,
     softtabstop = 4,
@@ -19,6 +18,7 @@ return {
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
+    maplocalleader = ",",
     autoformat_enabled = false, -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
     cmp_enabled = true, -- enable completion at start
     autopairs_enabled = true, -- enable autopairs at start
