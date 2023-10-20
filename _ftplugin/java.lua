@@ -2,7 +2,7 @@ require'lspconfig'.jedi_language_server.setup{}
 
 local config = {
     cmd = {
-        '<path/to>/jdtls',
+        '/home/linuxbrew/.linuxbrew/bin/jdtls',
         '-Declipse.application=org.eclipse.jdt.ls.core.id1',
         '-Dosgi.bundles.defaultStartLevel=4',
         '-Declipse.product=org.eclipse.jdt.ls.core.product',
@@ -60,7 +60,7 @@ local config = {
    },
    init_options = {
        bundles = {
-          vim.fn.glob("<path/to>/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-0.45.0.jar", 1)
+          vim.fn.glob("/home/latenite/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-0.45.0.jar", 1)
        }
    },
 }
@@ -78,7 +78,7 @@ require('jdtls').start_or_attach(config)
 
 local dap = require("dap")
 dap.defaults.fallback.external_terminal = {
-  command = '<path/to>/<term>';
+  command = '/opt/homebrew/bin/alacritty';
   args = {'-e'};
 }
 dap.defaults.fallback.force_external_terminal = true
@@ -86,5 +86,4 @@ dap.defaults.fallback.force_external_terminal = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
 vim.opt.colorcolumn = "100"
