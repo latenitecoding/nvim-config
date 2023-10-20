@@ -8,7 +8,6 @@ return {
       "cpp",
       "c_sharp",
       "go",
-      "haskell",
       "java",
       "julia",
       -- "lean", -- not available

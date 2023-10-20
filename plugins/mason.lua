@@ -10,7 +10,6 @@ return {
         "bashls", -- bash
         "clangd", -- c/c++
         "gopls", -- go
-        "hls", -- haskell
         "jdtls", -- java
         "julials", -- julia
         "lua_ls", -- lua
